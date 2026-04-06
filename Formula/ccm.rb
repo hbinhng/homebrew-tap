@@ -1,36 +1,45 @@
 class Ccm < Formula
   desc "Claude Credentials Manager — manage multiple Claude OAuth sessions for Claude Code"
   homepage "https://github.com/hbinhng/claude-credentials-manager"
-  version "1.0.0"
+  version "1.0.1"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://github.com/hbinhng/claude-credentials-manager/releases/download/v1.0.0/ccm-darwin-amd64"
-      sha256 "adb4d7f1f71fdf94bde9278e4f19e132f35f011736c9e62a78326bdb18258605"
+      url "https://github.com/hbinhng/claude-credentials-manager/releases/download/v1.0.1/ccm-darwin-amd64"
+      sha256 "8fee8af094e0f43ca32f933a0b86359efbb797fd6e293b193097cb45433dbd59"
     end
 
     on_arm do
-      url "https://github.com/hbinhng/claude-credentials-manager/releases/download/v1.0.0/ccm-darwin-arm64"
-      sha256 "139765bec265b5b9d0e147c3f7c5ead3e03ff786b66f4b4ce85f4fb42c54bb2b"
+      url "https://github.com/hbinhng/claude-credentials-manager/releases/download/v1.0.1/ccm-darwin-arm64"
+      sha256 "be39e1b722d91727bed17e100d686cc7f99cd3f8ed0f630ec6f661705d739293"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/hbinhng/claude-credentials-manager/releases/download/v1.0.0/ccm-linux-amd64"
-      sha256 "32e1384f0189baec42f27a12b5739f1d5cd29cd1bc2aeebd892a8a20b0b8e98e"
+      url "https://github.com/hbinhng/claude-credentials-manager/releases/download/v1.0.1/ccm-linux-amd64"
+      sha256 "2450edde62ff1281fde81839b79fecc929a423eb82cf42b316c3a9561b8db9be"
     end
 
     on_arm do
-      url "https://github.com/hbinhng/claude-credentials-manager/releases/download/v1.0.0/ccm-linux-arm64"
-      sha256 "ace00e4855f141514feb15b670f621231e36371180b13ef24bdb44f947456d48"
+      url "https://github.com/hbinhng/claude-credentials-manager/releases/download/v1.0.1/ccm-linux-arm64"
+      sha256 "105d6b6c5f427c583f3ddfadc5baf93abe2fc7609939a82b0bca596a6a9dd044"
     end
+  end
+
+  resource "man" do
+    url "https://github.com/hbinhng/claude-credentials-manager/releases/download/v1.0.1/ccm.1"
+    sha256 :no_check
   end
 
   def install
     binary = Dir.glob("ccm-*").first || "ccm"
     bin.install binary => "ccm"
+
+    resource("man").stage do
+      man1.install "ccm.1"
+    end
   end
 
   test do
