@@ -30,7 +30,7 @@ class Ccm < Formula
 
   resource "man" do
     url "https://github.com/hbinhng/claude-credentials-manager/releases/download/v1.0.1/ccm.1"
-    sha256 :no_check
+    sha256 "78c69fb9baa42cf6079f07d42d86b3ff0fea6602b21632b18b58a28bbd563639"
   end
 
   def install
