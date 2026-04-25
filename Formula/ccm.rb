@@ -1,35 +1,35 @@
 class Ccm < Formula
   desc "Claude Credentials Manager — manage multiple Claude OAuth sessions for Claude Code"
   homepage "https://github.com/hbinhng/claude-credentials-manager"
-  version "1.10.0"
+  version "1.11.0"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://github.com/hbinhng/claude-credentials-manager/releases/download/v1.10.0/ccm-darwin-amd64"
-      sha256 "a92a9b24e9d497c1c77b7f713ed581d4e7d9359b5213946234ed8cd2d94f120e"
+      url "https://github.com/hbinhng/claude-credentials-manager/releases/download/v1.11.0/ccm-darwin-amd64"
+      sha256 "3a7d7bbd1de3afd17f7e1c6765dff97f631e3fe6d7c67ba6b1f1560b5cd02d8a"
     end
 
     on_arm do
-      url "https://github.com/hbinhng/claude-credentials-manager/releases/download/v1.10.0/ccm-darwin-arm64"
-      sha256 "7866a00728229a2fede8f006f9221331768e7ff4035f08fb875da4d8950dcb20"
+      url "https://github.com/hbinhng/claude-credentials-manager/releases/download/v1.11.0/ccm-darwin-arm64"
+      sha256 "ea5c508aed1efedf3360122f151ec6bb6467bd4bdbd62cc84fd8fd37b0e2da78"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/hbinhng/claude-credentials-manager/releases/download/v1.10.0/ccm-linux-amd64"
-      sha256 "6c7c48678c5b8294565dbf19239b67f8bcf558c89992e61b32a85607e3b1e89a"
+      url "https://github.com/hbinhng/claude-credentials-manager/releases/download/v1.11.0/ccm-linux-amd64"
+      sha256 "417554ebd396f90243615e20bd5bfe739c8b520a541ccbac93f1b428b3daad9c"
     end
 
     on_arm do
-      url "https://github.com/hbinhng/claude-credentials-manager/releases/download/v1.10.0/ccm-linux-arm64"
-      sha256 "a5193c2f048b6e6868de08be5c193875363f4e649bdd0dcf8cf731a90a2f36b8"
+      url "https://github.com/hbinhng/claude-credentials-manager/releases/download/v1.11.0/ccm-linux-arm64"
+      sha256 "152aba47f9b124ce19aeef2d1477cca1248714d9139d723912528c11a9aaa84b"
     end
   end
 
   resource "man" do
-    url "https://github.com/hbinhng/claude-credentials-manager/releases/download/v1.10.0/ccm.1"
+    url "https://github.com/hbinhng/claude-credentials-manager/releases/download/v1.11.0/ccm.1"
     sha256 "c5442b01cfb19f7bebaf5a6918e91ac42e5cf915446bea19e4b01038c3debb3f"
   end
 
